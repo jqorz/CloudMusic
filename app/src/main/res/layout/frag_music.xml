@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/guide_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.asus.cloudmusic.View.ExpandList
+                android:id="@+id/expandlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide_list"
+                android:divider="@null"
+                android:groupIndicator="@null"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

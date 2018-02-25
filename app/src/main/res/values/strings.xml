@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CloudMusic</string>
+    <string name="createlist">创建的歌单</string>
+</resources>

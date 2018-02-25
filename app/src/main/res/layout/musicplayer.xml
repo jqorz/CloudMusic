@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/player_sliding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        app:umanoPanelHeight="0dp"
+        app:umanoShadowHeight="4dp">
+
+        <RelativeLayout
+            android:id="@+id/player_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/player_iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/player_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/player_bt_back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="10dp"
+                    android:src="@drawable/back" />
+
+
+                <ImageView
+                    android:id="@+id/player_bt_menu"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="13dp"
+                    android:src="@drawable/side_menu" />
+
+                <com.asus.cloudmusic.View.LoopTextView
+                    android:id="@+id/player_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@id/player_bt_menu"
+                    android:layout_toRightOf="@id/player_bt_back"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="最佳歌手"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/player_tv_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/player_tv_title"
+                    android:layout_below="@id/player_tv_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@id/player_bt_menu"
+                    android:layout_toRightOf="@id/player_bt_back"
+                    android:gravity="left"
+                    android:text="许嵩"
+                    android:textColor="@color/title_gray"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/player_bottom_contral"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/player_bt_mode"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="14dp"
+                    android:src="@drawable/recycle" />
+
+                <ImageView
+                    android:id="@+id/player_bt_player"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="15dp"
+                    android:src="@drawable/play" />
+
+                <ImageView
+                    android:id="@+id/player_bt_last"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/player_bt_player"
+                    android:padding="18dp"
+                    android:src="@drawable/last" />
+
+
+                <ImageView
+                    android:id="@+id/player_bt_next"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_alignTop="@id/player_bt_last"
+                    android:layout_toRightOf="@id/player_bt_player"
+                    android:padding="18dp"
+                    android:src="@drawable/next" />
+
+                <ImageView
+                    android:id="@+id/player_bt_list"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="12dp"
+                    android:src="@drawable/menu" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/player_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_above="@id/player_bottom_contral">
+
+                <TextView
+                    android:id="@+id/player_tv_start"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="right"
+                    android:text="00:00"
+                    android:textColor="@color/title_gray"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/player_tv_end"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"
+                    android:text="04:24"
+                    android:textColor="@color/title_gray"
+                    android:textSize="10sp" />
+
+                <SeekBar
+                    android:id="@+id/player_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/player_tv_end"
+                    android:layout_toRightOf="@id/player_tv_start"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/player_close_pop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/player_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:gravity="center"
+                android:text="test" />
+        </RelativeLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>
